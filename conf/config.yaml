@@ -1,0 +1,32 @@
+logging_dispatcher:
+  file: /usr/local/WOC/dispatcher/logs/dispatcher.log
+  level: INFO
+logging_data_collectors:
+  file: /usr/local/WOC/collectors/logs/data_collectors.log
+  level: INFO
+logging_event_collectors:
+  file: /usr/local/WOC/collectors/logs/event_collectors.log
+  level: INFO
+logging_assessment_collectors:
+  file: /usr/local/WOC/collectors/logs/assessment_collectors.log
+  level: INFO
+collectors_interval:
+  data_collector_interval: 300
+  event_collector_interval: 300
+  assessment_collector_interval: 3600
+customer:
+  partner_name: NAP IT
+output_collector:
+  port: 8802
+input_collector:
+  port: 8803
+kafka:
+  bootstrap_servers: localhost:9092
+  group_id: galileu_consumer
+influxdb:
+  url: http://localhost:8086
+  token: 31OzZGpCA5Bxy4FKrjARuFAH7Gob3t528n5ZxGS9xBiyZxPGNx8eZvGDQHNVwDpaRmzQQon4D75JuUdSfvna8Q==
+  org: NAPIT
+  bucket: galileu_wifi_monitoring
+sqlite3:
+  db: galileu.db
